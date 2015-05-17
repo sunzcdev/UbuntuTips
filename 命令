@@ -4,7 +4,7 @@
 SSH使用KEY登陆配置
 	检查本机是否有密钥：$ cd ~/.ssh
 	生成新的密钥：ssh-keygen -t rsa -C “本机的名字”
-	获取本机的rsa.pub
+	获取本机的rsa.pub（Ubuntu下绝对地址是:/home/sun/.ssh/id_rsa.pub）
 	登陆到远程SSH服务器，修改.ssh文件夹下的authorized_keys文件,将本机的rsa.pub的公钥内容添加进去
 	privoxy配置命令：sudo gedit /etc/privoxy/config
 			sudo /etc/init.d/privoxy restart
@@ -57,4 +57,5 @@ Oracle JDK安装：
 		#在Java8和Java7之间切换
 			sudo update-java-alternatives -s java-7-oracle
 			sudo update-java-alternatives -s java-8-oracle
+
 
