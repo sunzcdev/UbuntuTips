@@ -1,0 +1,60 @@
+翻墙命令：
+	ssh -qTfnN -D 7070 vda020@phact.dreamhost.com
+	规则列表：https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt
+SSH使用KEY登陆配置
+	检查本机是否有密钥：$ cd ~/.ssh
+	生成新的密钥：ssh-keygen -t rsa -C “本机的名字”
+	获取本机的rsa.pub
+	登陆到远程SSH服务器，修改.ssh文件夹下的authorized_keys文件,将本机的rsa.pub的公钥内容添加进去
+	privoxy配置命令：sudo gedit /etc/privoxy/config
+			sudo /etc/init.d/privoxy restart
+网站帐号密码：
+	域名：phact.dreamhost.com
+	帐号：vda020
+	密码：x2CGgLyd
+	数据库主机地址： mysql.db.arischow.org （注意：不是localhost）  
+	数据库名称：vda020db1 	 
+	数据库管理用户名： vda020 	 
+	数据库密码：05BfLS9Q 
+	phpMyAdmin管理入口：http://mysql.db.arischow.org
+解压命令：
+	tar -xvzf *.tar.gz -C 目录
+Terminal右键：
+	sudo apt-get install autilus-open-terminal
+64位系统需要安装32位库文件：
+	sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6
+LAMP安装命令:
+	sudo apt-get install apache2 php5 mysql-server php5-mysql
+	或者 sudo tastsel lamp-server
+	安装PHP扩展包名称 sudo apt-get install php5-gd curl libcurl3 libcurl3-dev php5-curl
+多线程下载工具
+	1.uget的安装：
+		sudo add-apt-repository ppa:plushuang-tw/uget-stable 
+		sudo apt-get update 
+		sudo apt-get install uget
+	2.aria2的安装：
+		sudo add-apt-repository ppa:t-tujikawa/ppa 
+		sudo apt-get update 
+		sudo apt-get install aria2
+	安装完aria2后，可以在终端中运行aria2 -v，查看版本和支持的特性。需要1.10以上的版本才能支持资源搜索。
+安装丢失的系统设置
+	 sudo apt-get install unity-control-center
+Eclipse插件：
+	SVN:	http://subclipse.tigris.org/update_1.10.x
+	Genymotion:	
+	ADT:	
+Oracle JDK安装：
+	1、设置源：
+		sudo add-apt-repository ppa:webupd8team/java
+		sudo apt-get update
+	2、开始安装
+		sudo apt-get install oracle-java8-installer
+	3、设置环境变量
+		sudo apt-get install oracle-java8-set-default
+	4、其他
+		#自动安装，自动接受license：
+			echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | 				sudo /usr/bin/debconf-set-selections
+		#在Java8和Java7之间切换
+			sudo update-java-alternatives -s java-7-oracle
+			sudo update-java-alternatives -s java-8-oracle
+
