@@ -57,5 +57,9 @@ Oracle JDK安装：
 		#在Java8和Java7之间切换
 			sudo update-java-alternatives -s java-7-oracle
 			sudo update-java-alternatives -s java-8-oracle
+电脑硬件温度显示：
+	sudo add-apt-repository ppa:alexmurray/indicator-sensors
+	sudo apt-get update
+	sudo apt-get install indicator-sensors
 
 
