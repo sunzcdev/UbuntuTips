@@ -57,9 +57,29 @@ Oracle JDK安装：
 		#在Java8和Java7之间切换
 			sudo update-java-alternatives -s java-7-oracle
 			sudo update-java-alternatives -s java-8-oracle
-电脑硬件温度显示：
-	sudo add-apt-repository ppa:alexmurray/indicator-sensors
+百度云管家：
+	https://github.com/LiuLang/bcloud-packages //找到其中deb类型的安装包下载下来之后，双击安装。安装之后在终端中输入bcloud-gui启动，然后在启动栏中右击程序图标，锁定到启动栏。
+Ubuntu-Tweak:
+	sudo add-apt-repository ppa:tualatrix/ppa
 	sudo apt-get update
-	sudo apt-get install indicator-sensors
+	sudo apt-get install ubuntu-tweak
+Ubuntu真机android调试
+	/etc/udev/rules.d/70-android.rules 
+		chmod a+rx 
+	-->	SUBSYSTEM=="usb", ATTRS{idVendor}=="0502", ATTRS{idProduct}=="3446",MODE="0666"  
+快捷方式创建格式
+	文件名.desktop
+	-->以下为模板，根据相应的键值来修改
+		[Desktop Entry]
+		Version=1.0
+		Type=Application
+		Name=eclipse
+		Name[zh_CN]=eclipse
+		Comment=eclipse
+		Comment[zh_CN]=eclipse
+		Exec=/home/tecn/adt-bundle-linux-x86_64-20140321/eclipse/eclipse
+		Icon=/home/tecn/adt-bundle-linux-x86_64-20140321/eclipse/icon.xpm
+		Terminal=false
+	将文件的权限修改为可执行
 
 
