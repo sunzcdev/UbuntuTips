@@ -59,6 +59,10 @@ Oracle JDK安装：
 			sudo update-java-alternatives -s java-8-oracle
 百度云管家：
 	https://github.com/LiuLang/bcloud-packages //找到其中deb类型的安装包下载下来之后，双击安装。安装之后在终端中输入bcloud-gui启动，然后在启动栏中右击程序图标，锁定到启动栏。
+电脑硬件温度显示：
+	sudo add-apt-repository ppa:alexmurray/indicator-sensors
+	sudo apt-get update
+	sudo apt-get install indicator-sensors
 Ubuntu-Tweak:
 	sudo add-apt-repository ppa:tualatrix/ppa
 	sudo apt-get update
